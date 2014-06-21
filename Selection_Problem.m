@@ -38,7 +38,7 @@
     
     [self p_sortFromBigToSmall:readInArray];
     
-    for (int i = k + 1; i < randomArray.count; i++) {
+    for (int i = k; i < randomArray.count; i++) {
         if ([randomArray[i] longLongValue] > [[readInArray lastObject] longLongValue]) {
             // 将randomArray[i] 插入到 readInArray中合适的位置
             [self p_insertNumber:randomArray[i] ToReadInArray:readInArray];
