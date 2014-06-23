@@ -12,6 +12,7 @@
 		D838EC4519531B4F005B7AD5 /* Algorithm_ObjectiveC.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D838EC4419531B4F005B7AD5 /* Algorithm_ObjectiveC.1 */; };
 		F91B1B191957F59400721FC0 /* Selection_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B1B181957F59400721FC0 /* Selection_Problem.m */; };
 		F91B1B1C1957F5B500721FC0 /* MaxSubsequenceSum.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B1B1B1957F5B500721FC0 /* MaxSubsequenceSum.m */; };
+		F91B1B1F1957FA5E00721FC0 /* WordPuzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B1B1E1957FA5E00721FC0 /* WordPuzzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		F91B1B181957F59400721FC0 /* Selection_Problem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Selection_Problem.m; path = "Chapter 1/Selection_Problem.m"; sourceTree = "<group>"; };
 		F91B1B1A1957F5B500721FC0 /* MaxSubsequenceSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaxSubsequenceSum.h; path = "Chapter 2/MaxSubsequenceSum.h"; sourceTree = "<group>"; };
 		F91B1B1B1957F5B500721FC0 /* MaxSubsequenceSum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaxSubsequenceSum.m; path = "Chapter 2/MaxSubsequenceSum.m"; sourceTree = "<group>"; };
+		F91B1B1D1957FA5E00721FC0 /* WordPuzzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordPuzzle.h; path = "Chapter 1/WordPuzzle.h"; sourceTree = "<group>"; };
+		F91B1B1E1957FA5E00721FC0 /* WordPuzzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordPuzzle.m; path = "Chapter 1/WordPuzzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 			children = (
 				F91B1B171957F59400721FC0 /* Selection_Problem.h */,
 				F91B1B181957F59400721FC0 /* Selection_Problem.m */,
+				F91B1B1D1957FA5E00721FC0 /* WordPuzzle.h */,
+				F91B1B1E1957FA5E00721FC0 /* WordPuzzle.m */,
 			);
 			name = "Chapter 1";
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91B1B191957F59400721FC0 /* Selection_Problem.m in Sources */,
+				F91B1B1F1957FA5E00721FC0 /* WordPuzzle.m in Sources */,
 				D838EC4119531B4F005B7AD5 /* main.m in Sources */,
 				F91B1B1C1957F5B500721FC0 /* MaxSubsequenceSum.m in Sources */,
 			);
