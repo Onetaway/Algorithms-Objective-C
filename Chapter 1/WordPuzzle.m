@@ -8,27 +8,68 @@
 
 #import "WordPuzzle.h"
 
-static const NSInteger row = 5;
-static const NSInteger column = 5;
+static const NSInteger number = 5;
 
 @interface WordPuzzle ()
 
-// 生成单词表格
 - (void)p_generateWordGrid;
+- (NSNumber *)p_generateRandomCharacter;
 
 @end
 
 @implementation WordPuzzle
 
-- (void)wordPuzzle
+- (void)findWord
 {
-    
+    [self p_generateWordGrid];
 }
 
 - (void)p_generateWordGrid
 {
-    char ch = 'a' + arc4random_uniform(26);
+    NSMutableArray *columnArray = [NSMutableArray arrayWithCapacity:number];
+    
+    for (int j = 0; j < number; j++) {
+        NSMutableArray *rowArray = [NSMutableArray array];
+        
+        for (int i = 0; i < number; i++) {
+            NSNumber *tmpNumber = [self p_generateRandomCharacter];
+            [rowArray addObject:tmpNumber];
+        }
+        
+        [columnArray addObject:rowArray];
+    }
+    
+    NSLog(@"columnArray = %@", columnArray);
 }
+
+- (NSNumber *)p_generateRandomCharacter
+{
+    NSUInteger asc = 'a' + arc4random_uniform(26);
+    return [NSNumber numberWithUnsignedInteger:asc];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
 

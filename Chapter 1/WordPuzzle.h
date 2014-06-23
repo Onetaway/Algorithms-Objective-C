@@ -12,6 +12,6 @@
 
 @interface WordPuzzle : NSObject
 
-- (void)wordPuzzle;
+- (void)findWord;
 
 @end
