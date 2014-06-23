@@ -44,6 +44,8 @@
     center = (left + right) / 2;
     maxLeftSum = [self p_maxSubSum:array leftBound:left rightBound:center];
     maxRightSum = [self p_maxSubSum:array leftBound:center + 1 rightBound:right];
+    
+    return 1;
 }
 
 @end

@@ -10,7 +10,8 @@
 		D838EC3E19531B4F005B7AD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D838EC3D19531B4F005B7AD5 /* Foundation.framework */; };
 		D838EC4119531B4F005B7AD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D838EC4019531B4F005B7AD5 /* main.m */; };
 		D838EC4519531B4F005B7AD5 /* Algorithm_ObjectiveC.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D838EC4419531B4F005B7AD5 /* Algorithm_ObjectiveC.1 */; };
-		D838EC4E19531BC8005B7AD5 /* Selection_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = D838EC4D19531BC8005B7AD5 /* Selection_Problem.m */; };
+		F91B1B191957F59400721FC0 /* Selection_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B1B181957F59400721FC0 /* Selection_Problem.m */; };
+		F91B1B1C1957F5B500721FC0 /* MaxSubsequenceSum.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B1B1B1957F5B500721FC0 /* MaxSubsequenceSum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +33,10 @@
 		D838EC4019531B4F005B7AD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D838EC4319531B4F005B7AD5 /* Algorithm_ObjectiveC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Algorithm_ObjectiveC-Prefix.pch"; sourceTree = "<group>"; };
 		D838EC4419531B4F005B7AD5 /* Algorithm_ObjectiveC.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Algorithm_ObjectiveC.1; sourceTree = "<group>"; };
-		D838EC4C19531BC8005B7AD5 /* Selection_Problem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Selection_Problem.h; sourceTree = "<group>"; };
-		D838EC4D19531BC8005B7AD5 /* Selection_Problem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Selection_Problem.m; sourceTree = "<group>"; };
+		F91B1B171957F59400721FC0 /* Selection_Problem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Selection_Problem.h; path = "Chapter 1/Selection_Problem.h"; sourceTree = "<group>"; };
+		F91B1B181957F59400721FC0 /* Selection_Problem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Selection_Problem.m; path = "Chapter 1/Selection_Problem.m"; sourceTree = "<group>"; };
+		F91B1B1A1957F5B500721FC0 /* MaxSubsequenceSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaxSubsequenceSum.h; path = "Chapter 2/MaxSubsequenceSum.h"; sourceTree = "<group>"; };
+		F91B1B1B1957F5B500721FC0 /* MaxSubsequenceSum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaxSubsequenceSum.m; path = "Chapter 2/MaxSubsequenceSum.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 		D838EC3119531B4F005B7AD5 = {
 			isa = PBXGroup;
 			children = (
+				F91B1B161957F57600721FC0 /* Chapter 2 */,
 				D838EC4B19531B9D005B7AD5 /* Chapter 1 */,
 				D838EC3F19531B4F005B7AD5 /* Algorithm_ObjectiveC */,
 				D838EC3C19531B4F005B7AD5 /* Frameworks */,
@@ -95,10 +99,19 @@
 		D838EC4B19531B9D005B7AD5 /* Chapter 1 */ = {
 			isa = PBXGroup;
 			children = (
-				D838EC4C19531BC8005B7AD5 /* Selection_Problem.h */,
-				D838EC4D19531BC8005B7AD5 /* Selection_Problem.m */,
+				F91B1B171957F59400721FC0 /* Selection_Problem.h */,
+				F91B1B181957F59400721FC0 /* Selection_Problem.m */,
 			);
 			name = "Chapter 1";
+			sourceTree = "<group>";
+		};
+		F91B1B161957F57600721FC0 /* Chapter 2 */ = {
+			isa = PBXGroup;
+			children = (
+				F91B1B1A1957F5B500721FC0 /* MaxSubsequenceSum.h */,
+				F91B1B1B1957F5B500721FC0 /* MaxSubsequenceSum.m */,
+			);
+			name = "Chapter 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D838EC4E19531BC8005B7AD5 /* Selection_Problem.m in Sources */,
+				F91B1B191957F59400721FC0 /* Selection_Problem.m in Sources */,
 				D838EC4119531B4F005B7AD5 /* main.m in Sources */,
+				F91B1B1C1957F5B500721FC0 /* MaxSubsequenceSum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +281,7 @@
 				D838EC4A19531B4F005B7AD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
