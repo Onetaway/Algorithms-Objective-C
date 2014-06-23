@@ -14,10 +14,11 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
+        // Chapter 1 Selection Problem
+        /*Selection_Problem *select = [[Selection_Problem alloc] init];
+        [select findBigK];*/
         
-        Selection_Problem *select = [[Selection_Problem alloc] init];
         
-        [select findBigK];
         
         
     }
