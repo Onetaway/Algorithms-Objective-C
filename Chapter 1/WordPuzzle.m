@@ -14,10 +14,12 @@ static const NSInteger number = 5;
 
 - (void)p_generateWordGrid;
 - (NSNumber *)p_generateRandomCharacter;
+- (void)p_startFind;
 
 @end
 
 @implementation WordPuzzle
+
 
 - (void)findWord
 {
@@ -47,26 +49,6 @@ static const NSInteger number = 5;
     NSUInteger asc = 'a' + arc4random_uniform(26);
     return [NSNumber numberWithUnsignedInteger:asc];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
