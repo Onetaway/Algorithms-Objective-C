@@ -12,9 +12,12 @@ static const NSInteger number = 5;
 
 @interface WordPuzzle ()
 
-- (void)p_generateWordGrid;
+- (void)p_generateCharacterGrid;
+- (NSArray *)p_generateWordGrid;
+- (NSArray *)p_generateWordLibrary;
+
 - (NSNumber *)p_generateRandomCharacter;
-- (void)p_startFind;
+- (void)p_startFindWord:(NSArray *)wordGrid wordLibrary:(NSArray *)library;
 
 @end
 
@@ -23,10 +26,18 @@ static const NSInteger number = 5;
 
 - (void)findWord
 {
-    [self p_generateWordGrid];
+    NSArray *wordGrid = [self p_generateWordGrid];
+    NSLog(@"wordGrid = %@", wordGrid);
+    
+    NSArray *wordLibrary = [self p_generateWordLibrary];
+    NSLog(@"wordLibrary = %@", wordLibrary);
+    
+    [self p_startFindWord:wordGrid wordLibrary:wordLibrary];
+    
 }
 
-- (void)p_generateWordGrid
+#pragma mark - Private Methods
+- (void)p_generateCharacterGrid
 {
     NSMutableArray *columnArray = [NSMutableArray arrayWithCapacity:number];
     
@@ -50,8 +61,45 @@ static const NSInteger number = 5;
     return [NSNumber numberWithUnsignedInteger:asc];
 }
 
+- (void)p_startFindWord:(NSArray *)wordGrid wordLibrary:(NSArray *)library
+{
+    
+    
+    for (int i = 0; i < wordGrid.count; i++) {
+        NSArray *tempRowArray = wordGrid[i];
+        NSMutableString *mutableString = [NSMutableString string];
+        
+        for (int j = 0; j < tempRowArray.count; j++) {
+            if (![library containsObject:tempRowArray[i]]) {
+                
+                
+                [mutableString appendString:tempRowArray[j]];
+                
+            }
+            
+        }
+        
+        NSLog(@"row array[%d] contains word: %@", i, mutableString);
+    }
+    
+}
 
+- (NSArray *)p_generateWordGrid
+{
+    NSArray *array0 = @[@"t", @"h", @"i", @"s"];
+    NSArray *array1 = @[@"w", @"a", @"t", @"s"];
+    NSArray *array2 = @[@"o", @"a", @"h", @"g"];
+    NSArray *array3 = @[@"f", @"g", @"d", @"t"];
+    
+    NSArray *result = [NSArray arrayWithObjects:array0, array1, array2, array3, nil];
+    return result;
+}
 
+- (NSArray *)p_generateWordLibrary
+{
+    NSArray *result = [NSArray arrayWithObjects:@"two", @"this", @"fat", @"that", nil];
+    return result;
+}
 
 @end
 
