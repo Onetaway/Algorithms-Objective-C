@@ -1,5 +1,1 @@
-##数据结构与算法分析 课后习题 Objective-C 版
-
----------
-
-###学习算法， 人人有责
+##If you want to be a good programmer,you can spend 10 years studying programmng, or spend 2 years studing programming and algorithm.
