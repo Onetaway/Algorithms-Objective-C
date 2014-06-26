@@ -51,9 +51,9 @@ void wordPuzzle()
 void printLinkLisr()
 {
     LinkNode *link = [[LinkNode alloc] init];
-    LinkNode *link1 = [[LinkNode alloc] init];
-    link1 = [link createLinkListByTailInsert];
-    [link printLinkList:link1];
+    LinkNode *linkTemp = [[LinkNode alloc] init];
+    linkTemp = [link createLinkListByTailInsert];
+    [link printLinkList:linkTemp];
 }
 
 

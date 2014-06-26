@@ -14,22 +14,22 @@
 
 @implementation LinkNode
 
+// 尾插法建单链表
 - (LinkNode *)createLinkListByTailInsert
 {
     LinkNode *tail = [[LinkNode alloc] init];
     LinkNode *head = [[LinkNode alloc] init];
-    head.next = nil;
-    tail.next = nil;
     
     head = tail;
     
-    for (NSInteger i = 0; i < 20; i++) {
+    for (int i = 0; i < 15; i++) {
         LinkNode *dataNode = [[LinkNode alloc] init];
         dataNode.data = i;
         
         tail.next = dataNode;
         tail = dataNode;
     }
+    
     tail.next = nil;
     
     return head;
@@ -43,7 +43,8 @@
     }
     
     while (link.next) {
-        NSLog(@"%ld", (long)link.data);
+        NSLog(@"%ld", (long)link.next.data);
+        link = link.next;
     }
 }
 
