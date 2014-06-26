@@ -14,13 +14,15 @@
 
 // Chapter 3
 #import "LinkNode.h"
+#import "ExchangeNeighbour.h"
 
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
 void wordPuzzle();
 
 #pragma mark - Chapter 3 Functions declarations
-void printLinkLisr();
+void printLinkLisr(); // Ex 3.1
+void exchangeNeighbour(); // Ex3.3
 
 #pragma mark - main
 int main(int argc, const char * argv[])
@@ -29,7 +31,8 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         //selectionProblem();
         //wordPuzzle();
-        printLinkLisr();
+        //printLinkLisr();
+        exchangeNeighbour();
     }
     return 0;
 }
@@ -56,7 +59,11 @@ void printLinkLisr()
     [link printLinkList:linkTemp];
 }
 
-
+void exchangeNeighbour()
+{
+    ExchangeNeighbour *exchange = [[ExchangeNeighbour alloc] init];
+    [exchange exchangeNeighbourBySingleLinkList];
+}
 
 
 
