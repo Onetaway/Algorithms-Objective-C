@@ -16,7 +16,6 @@
 @property (nonatomic, strong) LinkNode *next;
 
 
-- (LinkNode *)createEmptyLinkList;
 
 - (LinkNode *)createLinkListByTailInsert;
 

@@ -14,19 +14,14 @@
 
 @implementation LinkNode
 
-- (LinkNode *)createEmptyLinkList
-{
-    LinkNode *head = [[LinkNode alloc] init];
-    head.next = nil;
-    
-    return head;
-}
-
 - (LinkNode *)createLinkListByTailInsert
 {
     LinkNode *tail = [[LinkNode alloc] init];
     LinkNode *head = [[LinkNode alloc] init];
-    tail = head;
+    head.next = nil;
+    tail.next = nil;
+    
+    head = tail;
     
     for (NSInteger i = 0; i < 20; i++) {
         LinkNode *dataNode = [[LinkNode alloc] init];
