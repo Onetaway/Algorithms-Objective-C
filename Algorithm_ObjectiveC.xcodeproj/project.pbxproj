@@ -14,6 +14,8 @@
 		F91B1B1C1957F5B500721FC0 /* MaxSubsequenceSum.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B1B1B1957F5B500721FC0 /* MaxSubsequenceSum.m */; };
 		F91B1B1F1957FA5E00721FC0 /* WordPuzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F91B1B1E1957FA5E00721FC0 /* WordPuzzle.m */; };
 		F9A22E89195BACD400B4BC5D /* LinkNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A22E88195BACD400B4BC5D /* LinkNode.m */; };
+		F9A9D2E3195D38E000649AC5 /* ExchangeNeighbour.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A9D2E2195D38E000649AC5 /* ExchangeNeighbour.m */; };
+		F9A9D2E6195D38F800649AC5 /* PrintValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A9D2E5195D38F800649AC5 /* PrintValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		F91B1B1E1957FA5E00721FC0 /* WordPuzzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordPuzzle.m; path = "Chapter 1/WordPuzzle.m"; sourceTree = "<group>"; };
 		F9A22E87195BACD400B4BC5D /* LinkNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkNode.h; path = "Chapter 3/LinkNode.h"; sourceTree = "<group>"; };
 		F9A22E88195BACD400B4BC5D /* LinkNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkNode.m; path = "Chapter 3/LinkNode.m"; sourceTree = "<group>"; };
+		F9A9D2E1195D38E000649AC5 /* ExchangeNeighbour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeNeighbour.h; path = "Chapter 3/ExchangeNeighbour.h"; sourceTree = "<group>"; };
+		F9A9D2E2195D38E000649AC5 /* ExchangeNeighbour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeNeighbour.m; path = "Chapter 3/ExchangeNeighbour.m"; sourceTree = "<group>"; };
+		F9A9D2E4195D38F800649AC5 /* PrintValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrintValue.h; path = "Chapter 1/PrintValue.h"; sourceTree = "<group>"; };
+		F9A9D2E5195D38F800649AC5 /* PrintValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrintValue.m; path = "Chapter 1/PrintValue.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,8 @@
 		D838EC4B19531B9D005B7AD5 /* Chapter 1 */ = {
 			isa = PBXGroup;
 			children = (
+				F9A9D2E4195D38F800649AC5 /* PrintValue.h */,
+				F9A9D2E5195D38F800649AC5 /* PrintValue.m */,
 				F91B1B171957F59400721FC0 /* Selection_Problem.h */,
 				F91B1B181957F59400721FC0 /* Selection_Problem.m */,
 				F91B1B1D1957FA5E00721FC0 /* WordPuzzle.h */,
@@ -126,6 +134,8 @@
 		F9A22E86195BA25F00B4BC5D /* Chapter 3 */ = {
 			isa = PBXGroup;
 			children = (
+				F9A9D2E1195D38E000649AC5 /* ExchangeNeighbour.h */,
+				F9A9D2E2195D38E000649AC5 /* ExchangeNeighbour.m */,
 				F9A22E87195BACD400B4BC5D /* LinkNode.h */,
 				F9A22E88195BACD400B4BC5D /* LinkNode.m */,
 			);
@@ -185,7 +195,9 @@
 			files = (
 				F91B1B191957F59400721FC0 /* Selection_Problem.m in Sources */,
 				F9A22E89195BACD400B4BC5D /* LinkNode.m in Sources */,
+				F9A9D2E3195D38E000649AC5 /* ExchangeNeighbour.m in Sources */,
 				F91B1B1F1957FA5E00721FC0 /* WordPuzzle.m in Sources */,
+				F9A9D2E6195D38F800649AC5 /* PrintValue.m in Sources */,
 				D838EC4119531B4F005B7AD5 /* main.m in Sources */,
 				F91B1B1C1957F5B500721FC0 /* MaxSubsequenceSum.m in Sources */,
 			);
