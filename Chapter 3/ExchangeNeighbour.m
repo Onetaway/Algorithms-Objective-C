@@ -28,6 +28,12 @@
 
 #pragma mark - Double Link Related
 - (DoubleLinkNode *)p_createDoubleLinkListByTailInsert;
+- (void)p_printDoubleLinkList:(DoubleLinkNode *)link;
+- (DoubleLinkNode *)p_exchangeDoubleLinkList:(DoubleLinkNode *)link
+                                       dataA:(NSInteger)dataA
+                                       dataB:(NSInteger)dataB;
+- (DoubleLinkNode *)p_findElementInDoubleLinkList:(NSInteger)data
+                                             list:(DoubleLinkNode *)link;
 
 
 @end
@@ -38,10 +44,10 @@
 {
     LinkNode *beforeExchange = [self p_createSingleLinkListByTailInsert];
     
-    NSLog(@"交换元素前:");
+    NSLog(@"单链表交换元素前:");
     [self p_printSingleLinkList:beforeExchange];
     
-    NSLog(@"交换元素后:");
+    NSLog(@"单链表交换元素后:");
     LinkNode *afterExchange = [self p_exchangeSingleLinkList:beforeExchange
                                                        dataA:3
                                                        dataB:4];
@@ -51,7 +57,15 @@
 
 - (void)exchangeNeighbourByDoubleLinkList
 {
+    NSLog(@"双链表交换元素前:");
+    DoubleLinkNode *beforeExchange = [self p_createDoubleLinkListByTailInsert];
+    [self p_printDoubleLinkList:beforeExchange];
     
+    NSLog(@"双链表交换元素后");
+    DoubleLinkNode *afterExchange = [self p_exchangeDoubleLinkList:beforeExchange
+                                                             dataA:4
+                                                             dataB:5];
+    [self p_printDoubleLinkList:afterExchange];
 }
 
 #pragma mark - Private Methods
@@ -177,9 +191,76 @@
 #pragma mark - Double Link Related
 - (DoubleLinkNode *)p_createDoubleLinkListByTailInsert
 {
+    DoubleLinkNode *head = [[DoubleLinkNode alloc] init];
+    head.data = 0;
+    head.prior = nil;
+    head.next = nil;
     
+    DoubleLinkNode *tail = [[DoubleLinkNode alloc] init];
+    tail = head;
+    
+    for (int i = 0; i < 12; i++) {
+        DoubleLinkNode *dataNode = [[DoubleLinkNode alloc] init];
+        dataNode.data = i;
+        
+        tail.next = dataNode;
+        dataNode.prior = tail;
+        dataNode.next = nil;
+        tail = dataNode;
+    }
+    
+    return head;
 }
 
+- (void)p_printDoubleLinkList:(DoubleLinkNode *)link
+{
+    NSAssert(link, @"double link can't be nil");
+    
+    DoubleLinkNode *p = [[DoubleLinkNode alloc] init];
+    p = link;
+    
+    while (p.next) {
+        NSLog(@"double link node value: %ld", (long)p.next.data);
+        p = p.next;
+    }
+}
+
+- (DoubleLinkNode *)p_exchangeDoubleLinkList:(DoubleLinkNode *)link
+                                       dataA:(NSInteger)dataA
+                                       dataB:(NSInteger)dataB
+{
+    NSAssert(link, @"double link can't be nil");
+    
+    DoubleLinkNode *positionA = [self p_findElementInDoubleLinkList:dataA list:link];
+    DoubleLinkNode *positionB = [self p_findElementInDoubleLinkList:dataB list:link];
+    
+    DoubleLinkNode *beforePositionA = positionA.prior;
+    DoubleLinkNode *afterPositionB = positionB.next;
+    
+    // 注意下列语句的执行顺序
+    beforePositionA.next = positionB;
+    positionB.next = positionA;
+    positionA.next = afterPositionB;
+    positionB.prior = beforePositionA;
+    afterPositionB.prior = positionA;
+    positionA.prior = positionB;
+    
+    return link;
+}
+
+- (DoubleLinkNode *)p_findElementInDoubleLinkList:(NSInteger)data
+                                             list:(DoubleLinkNode *)link
+{
+    NSAssert(link, @"double link can't be nil");
+    
+    DoubleLinkNode *p = link;
+    
+    while (data != p.data) {
+        p = p.next;
+    }
+    
+    return p;
+}
 
 @end
 
