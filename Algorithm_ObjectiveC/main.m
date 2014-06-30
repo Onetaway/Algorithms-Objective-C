@@ -15,6 +15,7 @@
 // Chapter 3
 #import "LinkNode.h"
 #import "ExchangeNeighbour.h"
+#import "LanguageBalanceSymbol.h"
 
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
@@ -22,7 +23,8 @@ void wordPuzzle();
 
 #pragma mark - Chapter 3 Functions declarations
 void printLinkLisr(); // Ex 3.1
-void exchangeNeighbour(); // Ex3.3
+void exchangeNeighbour(); // Ex 3.3
+void checkLanguageBalanceSymbol(); // Ex 3.18
 
 #pragma mark - main
 int main(int argc, const char * argv[])
@@ -32,7 +34,8 @@ int main(int argc, const char * argv[])
         //selectionProblem();
         //wordPuzzle();
         //printLinkLisr();
-        exchangeNeighbour();
+        //exchangeNeighbour();
+        checkLanguageBalanceSymbol();
     }
     return 0;
 }
@@ -68,6 +71,12 @@ void exchangeNeighbour()
     [doubleExchange exchangeNeighbourByDoubleLinkList];
 }
 
+void checkLanguageBalanceSymbol()
+{
+    LanguageBalanceSymbol *check = [[LanguageBalanceSymbol alloc] init];
+    [check checkPascal];
+    [check checkC];
+}
 
 
 
