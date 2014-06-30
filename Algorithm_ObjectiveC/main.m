@@ -61,8 +61,11 @@ void printLinkLisr()
 
 void exchangeNeighbour()
 {
-    ExchangeNeighbour *exchange = [[ExchangeNeighbour alloc] init];
-    [exchange exchangeNeighbourBySingleLinkList];
+    ExchangeNeighbour *singleExchange = [[ExchangeNeighbour alloc] init];
+    [singleExchange exchangeNeighbourBySingleLinkList];
+    
+    ExchangeNeighbour *doubleExchange = [[ExchangeNeighbour alloc] init];
+    [doubleExchange exchangeNeighbourByDoubleLinkList];
 }
 
 

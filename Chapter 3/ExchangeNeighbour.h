@@ -12,11 +12,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class LinkNode;
+@class LinkNode, DoubleLinkNode;
 
 @interface ExchangeNeighbour : NSObject
 
 @property (nonatomic, strong) LinkNode *singleLinkList;
+@property (nonatomic, strong) DoubleLinkNode *doubleLinkList;
 
 
 - (void)exchangeNeighbourBySingleLinkList;

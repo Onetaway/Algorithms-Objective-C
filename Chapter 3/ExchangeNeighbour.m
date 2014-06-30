@@ -8,11 +8,15 @@
 
 #import "ExchangeNeighbour.h"
 
+// Single Link
 #import "LinkNode.h"
+
+// Double Link
+#import "DoubleLinkNode.h"
 
 @interface ExchangeNeighbour ()
 
-// 使用尾插法创建单链表
+#pragma mark - Single Link Related
 - (LinkNode *)p_createSingleLinkListByTailInsert;
 - (void)p_printSingleLinkList:(LinkNode *)link;
 - (LinkNode *)p_exchangeSingleLinkList:(LinkNode *)link
@@ -21,6 +25,10 @@
 - (LinkNode *)p_findElementInSingleLinkList:(NSInteger)data list:(LinkNode *)link;
 - (LinkNode *)p_findPriorItemOfNode:(LinkNode *)aNode inLinkList:(LinkNode *)link;
 - (LinkNode *)p_findNextItemOfNode:(LinkNode *)aNode inLinkList:(LinkNode *)link;
+
+#pragma mark - Double Link Related
+- (DoubleLinkNode *)p_createDoubleLinkListByTailInsert;
+
 
 @end
 
@@ -47,6 +55,7 @@
 }
 
 #pragma mark - Private Methods
+#pragma mark   Single Link Related
 - (LinkNode *)p_createSingleLinkListByTailInsert
 {
     LinkNode *head = [[LinkNode alloc] init];
@@ -164,6 +173,13 @@
     
     return p;
 }
+
+#pragma mark - Double Link Related
+- (DoubleLinkNode *)p_createDoubleLinkListByTailInsert
+{
+    
+}
+
 
 @end
 
