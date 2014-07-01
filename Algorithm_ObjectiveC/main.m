@@ -18,6 +18,7 @@
 #import "LanguageBalanceSymbol.h"
 #import "PrintLots.h"
 #import "PrintLink.h"
+#import "Intersect.h"
 
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
@@ -25,9 +26,11 @@ void wordPuzzle();
 
 #pragma mark - Chapter 3 Functions declarations
 void printLinkList(); // Ex 3.1
-void exchangeNeighbour(); // Ex 3.3
-void checkLanguageBalanceSymbol(); // Ex 3.18
 void printLots();   // Ex 3.2
+void exchangeNeighbour(); // Ex 3.3
+void intersect();   // Ex 3.4
+void checkLanguageBalanceSymbol(); // Ex 3.18
+
 
 #pragma mark - main
 int main(int argc, const char * argv[])
@@ -39,7 +42,8 @@ int main(int argc, const char * argv[])
         //printLinkList();  // Ex 3.1
         //exchangeNeighbour();
         //checkLanguageBalanceSymbol();
-        printLots();
+        //printLots();
+        intersect();
     }
     return 0;
 }
@@ -85,6 +89,12 @@ void printLots()
 {
     PrintLots *pLots = [[PrintLots alloc] init];
     [pLots printLots];
+}
+
+void intersect()
+{
+    Intersect *insect = [[Intersect alloc] init];
+    [insect intersect];
 }
 
 

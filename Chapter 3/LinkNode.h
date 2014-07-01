@@ -32,11 +32,13 @@
 
 - (void)deleteList:(LinkNode *)link;
 - (LinkNode *)headerNode:(LinkNode *)link;
-- (LinkNode *)firstNode:(LinkNode *)link;
++ (LinkNode *)firstNode:(LinkNode *)link;
 
 - (LinkNode *)advance:(LinkNode *)position;
 - (NSInteger)retrieve:(LinkNode *)position inLink:(LinkNode *)link;
-- (void)printLinkList:(LinkNode *)link;
+
+
++ (void)printLinkList:(LinkNode *)link;
 
 
 @end

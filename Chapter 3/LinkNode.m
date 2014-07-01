@@ -58,13 +58,25 @@
     return p.data;
 }
 
-- (void)printLinkList:(LinkNode *)link
++ (void)printLinkList:(LinkNode *)link
 {
     NSAssert(link, @"link can't be nil");
     
     while (link.next) {
         NSLog(@"link%@ %ld", link, (long)link.next.data);
         link = link.next;
+    }
+    NSLog(@"-------------");
+}
+
++ (LinkNode *)firstNode:(LinkNode *)link
+{
+    NSAssert(link, @"link can't be nil");
+    
+    if (link.next) {
+        return link.next;
+    } else {
+        return nil;
     }
 }
 

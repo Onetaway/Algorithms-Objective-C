@@ -23,8 +23,8 @@
     self.linkL = [self p_createLinkLByTail];
     self.linkP = [self p_createLinkPByTail];
     
-    [self.linkL printLinkList:self.linkL];
-    [self.linkP printLinkList:self.linkP];
+    [LinkNode printLinkList:self.linkL];
+    [LinkNode printLinkList:self.linkP];
     
     NSInteger count = 0;
     
