@@ -16,15 +16,18 @@
 #import "LinkNode.h"
 #import "ExchangeNeighbour.h"
 #import "LanguageBalanceSymbol.h"
+#import "PrintLots.h"
+#import "PrintLink.h"
 
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
 void wordPuzzle();
 
 #pragma mark - Chapter 3 Functions declarations
-void printLinkLisr(); // Ex 3.1
+void printLinkList(); // Ex 3.1
 void exchangeNeighbour(); // Ex 3.3
 void checkLanguageBalanceSymbol(); // Ex 3.18
+void printLots();   // Ex 3.2
 
 #pragma mark - main
 int main(int argc, const char * argv[])
@@ -33,9 +36,10 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         //selectionProblem();
         //wordPuzzle();
-        //printLinkLisr();
+        //printLinkList();  // Ex 3.1
         //exchangeNeighbour();
-        checkLanguageBalanceSymbol();
+        //checkLanguageBalanceSymbol();
+        printLots();
     }
     return 0;
 }
@@ -54,12 +58,11 @@ void wordPuzzle()
 }
 
 #pragma mark - Chapter 3 Functions Implements
-void printLinkLisr()
+void printLinkList()
 {
-    LinkNode *link = [[LinkNode alloc] init];
-    LinkNode *linkTemp = [[LinkNode alloc] init];
-    linkTemp = [link createLinkListByTailInsert];
-    [link printLinkList:linkTemp];
+    PrintLink *printLink = [[PrintLink alloc] init];
+    LinkNode *link = [printLink createLinkListByTailInsert];
+    [printLink printLinkList:link];
 }
 
 void exchangeNeighbour()
@@ -78,7 +81,11 @@ void checkLanguageBalanceSymbol()
     [check checkC];
 }
 
-
+void printLots()
+{
+    PrintLots *pLots = [[PrintLots alloc] init];
+    [pLots printLots];
+}
 
 
 

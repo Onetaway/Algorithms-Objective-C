@@ -14,36 +14,56 @@
 
 @implementation LinkNode
 
-// 尾插法建单链表
-- (LinkNode *)createLinkListByTailInsert
+
+#pragma mark - 单链表的基本操作
+- (LinkNode *)makeEmpty:(LinkNode *)link
 {
-    LinkNode *tail = [[LinkNode alloc] init];
-    LinkNode *head = [[LinkNode alloc] init];
+    NSAssert(link, @"link can't be nil");
     
-    head = tail;
+    link.next = nil;
+    return link;
+}
+
+- (BOOL)isEmpty:(LinkNode *)link
+{
+    NSAssert(link, @"link can't be nil");
     
-    for (int i = 0; i < 15; i++) {
-        LinkNode *dataNode = [[LinkNode alloc] init];
-        dataNode.data = i;
-        
-        tail.next = dataNode;
-        tail = dataNode;
+    return link.next == nil;
+}
+
+- (LinkNode *)findElement:(int)x inLink:(LinkNode *)link
+{
+    NSAssert(link, @"link can't be nil");
+    
+    LinkNode *p = link;
+    
+    while (p.next.data != x) {
+        p = p.next;
     }
     
-    tail.next = nil;
+    return p;
+}
+
+- (NSInteger)retrieve:(LinkNode *)position inLink:(LinkNode *)link
+{
+    NSAssert(position, @"position can't be nil");
+    NSAssert(link, @"link can't be nil");
     
-    return head;
+    LinkNode *p = link;
+    
+    while (p.next != position) {
+        p = p.next;
+    }
+    
+    return p.data;
 }
 
 - (void)printLinkList:(LinkNode *)link
 {
-    if (!link) {
-        NSLog(@"link is empty");
-        return;
-    }
+    NSAssert(link, @"link can't be nil");
     
     while (link.next) {
-        NSLog(@"%ld", (long)link.next.data);
+        NSLog(@"link%@ %ld", link, (long)link.next.data);
         link = link.next;
     }
 }
