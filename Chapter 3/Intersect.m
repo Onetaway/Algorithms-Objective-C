@@ -14,6 +14,7 @@
 
 - (LinkNode *)p_createLinkL1ByTail;
 - (LinkNode *)p_createLinkL2ByTail;
+- (LinkNode *)p_intersectLink1:(LinkNode *)l1 withLink2:(LinkNode *)l2;
 
 @end
 
@@ -36,7 +37,7 @@
     LinkNode *tail = [[LinkNode alloc] init];
     head = tail;
     
-    for (NSInteger i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) {
         LinkNode *dataNode = [[LinkNode alloc] init];
         dataNode.data = i;
         
@@ -54,7 +55,7 @@
     LinkNode *tail = [[LinkNode alloc] init];
     head = tail;
     
-    for (NSInteger i = 5; i < 13; i++) {
+    for (int i = 5; i < 13; i++) {
         LinkNode *dataNode = [[LinkNode alloc] init];
         dataNode.data = i;
         
@@ -64,6 +65,32 @@
     }
     
     return head;
+}
+
+- (LinkNode *)p_intersectLink1:(LinkNode *)l1 withLink2:(LinkNode *)l2
+{
+    LinkNode *result = [[LinkNode alloc] init];
+    LinkNode *p1 = l1;
+    LinkNode *p2 = l2;
+    
+    while (p1.next && p2.next) {
+        if (p1.next.data > p2.next.data) {
+            p2 = p2.next;
+        } else if (p1.next.data < p2.next.data) {
+            p1 = p1.next;
+        } else {
+            [LinkNode insertElement:p1.next.data
+                             inLink:result
+                         atPosition:result.next];
+            p1 = p1.next;
+            p2 = p2.next;
+            result = result.next;
+        }
+        
+    }
+    
+    
+    return result;
 }
 
 @end

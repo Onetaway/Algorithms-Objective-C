@@ -34,7 +34,7 @@
     while (tmpLinkP.next && tmpLinkL.next) {
         
         if (tmpLinkP.next.data == count++) {
-            NSLog(@"link L element: %ld", tmpLinkL.next.data);
+            NSLog(@"link L element: %d", tmpLinkL.next.data);
             tmpLinkP = tmpLinkP.next;
         }
         tmpLinkL = tmpLinkL.next;
