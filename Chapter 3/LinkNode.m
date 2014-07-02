@@ -15,7 +15,7 @@
 @implementation LinkNode
 
 
-#pragma mark - 单链表的基本操作
+#pragma mark - Single Link List Basic Operations
 + (LinkNode *)makeEmpty:(LinkNode *)link
 {
     NSAssert(link, @"link can't be nil");
@@ -96,15 +96,21 @@
     insertedNode.data = x;
     
     BOOL isLast = [LinkNode isLast:position inLink:link];
-    
+    LinkNode *firstNode = [LinkNode firstNode:link];
+    BOOL isFirst = (position == firstNode);
+    int data = [LinkNode retrieve:position inLink:link];
+    LinkNode *insertPrevious = [LinkNode findPreviousOfElement:data inLink:link];
     
     if (isLast) {
         position.next = insertedNode;
         insertedNode.next = nil;
+    } else if (isFirst) {
+        insertedNode.next = link.next;
+        link.next = insertedNode;
+    } else {
+        insertedNode.next = insertPrevious.next;
+        insertPrevious.next = insertedNode;
     }
-    
-    // 中间情形
-    //LinkNode *insertPrevious = [LinkNode findPreviousOfElement:<#(int)#> inLink:<#(LinkNode *)#>]
 }
 
 + (void)deleteList:(LinkNode *)link

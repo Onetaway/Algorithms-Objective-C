@@ -25,6 +25,15 @@
 + (BOOL)isLast:(LinkNode *)position inLink:(LinkNode *)link;
 + (LinkNode *)findElement:(int)x inLink:(LinkNode *)link;
 + (void)deleteElement:(int)x inLink:(LinkNode *)link;
+
+/**
+ *  Find previous node of the given data
+ *
+ *  @param x    The given data
+ *  @param link The header of the single link list
+ *
+ *  @return The position of the previous node acoording to the given data
+ */
 + (LinkNode *)findPreviousOfElement:(int)x inLink:(LinkNode *)link;
 
 /**
@@ -62,6 +71,8 @@
  *  @return The first node of the link.(Not the header node)
  */
 + (LinkNode *)firstNode:(LinkNode *)link;
+
+
 + (LinkNode *)advance:(LinkNode *)position;
 
 /**
