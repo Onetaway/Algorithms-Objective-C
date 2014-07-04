@@ -140,10 +140,10 @@
     return firstNode;
 }
 
-+ (LinkNode *)advance:(LinkNode *)position
-{
-    
-}
+//+ (LinkNode *)advance:(LinkNode *)position
+//{
+//    
+//}
 
 + (int)retrieve:(LinkNode *)position inLink:(LinkNode *)link
 {

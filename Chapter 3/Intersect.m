@@ -28,6 +28,10 @@
     [LinkNode printLinkList:L1];
     [LinkNode printLinkList:L2];
     
+    LinkNode *resultLink = [self p_intersectLink1:L1 withLink2:L2];
+    
+    [LinkNode printLinkList:resultLink];
+    
 }
 
 #pragma mark - Private Methods
