@@ -73,9 +73,13 @@
 
 - (LinkNode *)p_intersectLink1:(LinkNode *)l1 withLink2:(LinkNode *)l2
 {
-    LinkNode *result = [[LinkNode alloc] init];
+    LinkNode *resultHead = [[LinkNode alloc] init];
+    LinkNode *resultTail = resultHead;
+    
     LinkNode *p1 = l1;
     LinkNode *p2 = l2;
+    
+    
     
     while (p1.next && p2.next) {
         if (p1.next.data > p2.next.data) {
@@ -83,18 +87,20 @@
         } else if (p1.next.data < p2.next.data) {
             p1 = p1.next;
         } else {
-            [LinkNode insertElement:p1.next.data
-                             inLink:result
-                         atPosition:result.next];
+            
+            LinkNode *dataNode = [[LinkNode alloc] init];
+            dataNode.data = p1.next.data;
+            
+            resultTail.next = dataNode;
+            resultTail = dataNode;
+            
             p1 = p1.next;
             p2 = p2.next;
-            result = result.next;
         }
         
     }
     
-    
-    return result;
+    return resultHead;
 }
 
 @end
