@@ -19,6 +19,7 @@
 #import "PrintLots.h"
 #import "PrintLink.h"
 #import "Intersect.h"
+#import "Union.h"
 
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
@@ -29,6 +30,7 @@ void printLinkList(); // Ex 3.1
 void printLots();   // Ex 3.2
 void exchangeNeighbour(); // Ex 3.3
 void intersect();   // Ex 3.4
+void unionLink();  // Ex 3.5
 void checkLanguageBalanceSymbol(); // Ex 3.18
 
 
@@ -43,7 +45,8 @@ int main(int argc, const char * argv[])
         //exchangeNeighbour();
         //checkLanguageBalanceSymbol();
         //printLots();
-        intersect();
+        //intersect();
+        unionLink();
     }
     return 0;
 }
@@ -97,6 +100,11 @@ void intersect()
     [insect intersect];
 }
 
+void unionLink()
+{
+    Union *unionLink = [[Union alloc] init];
+    [unionLink unionLink];
+}
 
 
 
