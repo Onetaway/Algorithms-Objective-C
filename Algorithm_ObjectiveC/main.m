@@ -20,6 +20,7 @@
 #import "PrintLink.h"
 #import "Intersect.h"
 #import "Union.h"
+#import "AddPolynomial.h"
 
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
@@ -31,6 +32,7 @@ void printLots();   // Ex 3.2
 void exchangeNeighbour(); // Ex 3.3
 void intersect();   // Ex 3.4
 void unionLink();  // Ex 3.5
+void addPolynomial(); // Ex 3.6
 void checkLanguageBalanceSymbol(); // Ex 3.18
 
 
@@ -46,7 +48,8 @@ int main(int argc, const char * argv[])
         //checkLanguageBalanceSymbol();
         //printLots();
         //intersect();
-        unionLink();
+        //unionLink();
+        addPolynomial();
     }
     return 0;
 }
@@ -106,6 +109,11 @@ void unionLink()
     [unionLink unionLink];
 }
 
+void addPolynomial()
+{
+    AddPolynomial *addPolynomial = [[AddPolynomial alloc] init];
+    [addPolynomial addPolynomial];
+}
 
 
 
