@@ -104,6 +104,8 @@
             poly2 = poly2.next;
             
         } else {
+            
+            
             AddPolynomial *addNode = [[AddPolynomial alloc] init];
             addNode.coefficient = poly1.next.coefficient + poly2.next.coefficient;
             addNode.exponent = poly1.next.exponent;
