@@ -95,13 +95,13 @@
     while (poly1.next && poly2.next) {
         if (poly1.next.exponent < poly2.next.exponent) {
             resultTail.next = poly2.next;
-            resultTail = poly2.next;
-            poly1 = poly1.next;
+            resultTail = resultTail.next;
+            poly2 = poly2.next;
             
         } else if (poly1.next.exponent > poly2.next.exponent) {
             resultTail.next = poly1.next;
-            resultTail = poly1.next;
-            poly2 = poly2.next;
+            resultTail = resultTail.next;
+            poly1 = poly1.next;
             
         } else {
             
