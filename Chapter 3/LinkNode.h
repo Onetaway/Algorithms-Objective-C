@@ -23,6 +23,15 @@
 + (LinkNode *)makeEmpty:(LinkNode *)link;
 + (BOOL)isEmpty:(LinkNode *)link;
 + (BOOL)isLast:(LinkNode *)position inLink:(LinkNode *)link;
+
+/**
+ *  Find element in the link
+ *
+ *  @param x    The element you want to find
+ *  @param link The given link
+ *
+ *  @return The pointer of the found element
+ */
 + (LinkNode *)findElement:(int)x inLink:(LinkNode *)link;
 + (void)deleteElement:(int)x inLink:(LinkNode *)link;
 

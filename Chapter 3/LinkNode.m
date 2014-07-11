@@ -57,9 +57,15 @@
         p = p.next;
     }
     
-    return p;
+    return p.next;
 }
 
+/**
+ *  Delete the element in the given link
+ *
+ *  @param x    The element which you want to delete
+ *  @param link The given link
+ */
 + (void)deleteElement:(int)x inLink:(LinkNode *)link
 {
     NSAssert(link, @"link can't be nil");

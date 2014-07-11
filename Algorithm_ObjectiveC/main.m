@@ -22,6 +22,7 @@
 #import "Union.h"
 #import "AddPolynomial.h"
 #import "FindSpecificElement.h"
+#import "SelfAdjusting.h"
 
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
@@ -34,7 +35,8 @@ void exchangeNeighbour(); // Ex 3.3
 void intersect();   // Ex 3.4
 void unionLink();  // Ex 3.5
 void addPolynomial(); // Ex 3.6
-void findSpecificElement();  // 3.11
+void findSpecificElement();  // Ex 3.11
+void selfAdjusting(); // Ex 3.15
 void checkLanguageBalanceSymbol(); // Ex 3.18
 
 
@@ -52,7 +54,9 @@ int main(int argc, const char * argv[])
         //intersect();
         //unionLink();
         //addPolynomial();
-        findSpecificElement();
+        //findSpecificElement();
+        selfAdjusting();
+        
     }
     return 0;
 }
@@ -124,7 +128,12 @@ void findSpecificElement()
     [findSpecific findSpecificElement];
 }
 
-
+void selfAdjusting()
+{
+    SelfAdjusting *adjust = [[SelfAdjusting alloc] init];
+    [adjust selfAdjustingArray];
+    [adjust selfAdjustingLink];
+}
 
 
 
