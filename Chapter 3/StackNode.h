@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Stack : NSObject
+@interface StackNode : NSObject
 
-@property (nonatomic, strong) id data;
-@property (nonatomic, strong) Stack *next;
+@property (nonatomic, assign,readonly) int data;
+@property (nonatomic, strong, readonly) StackNode *next;
+
++ (BOOL)isEmpty:(StackNode *)stack;
 
 @end

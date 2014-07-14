@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Onet away. All rights reserved.
 //
 
-#import "Stack.h"
+#import "StackNode.h"
 
-@implementation Stack
+@implementation StackNode
 
 @end
