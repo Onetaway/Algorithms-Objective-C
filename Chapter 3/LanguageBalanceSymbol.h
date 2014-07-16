@@ -13,11 +13,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class Stack;
+@class StackNode;
 
 @interface LanguageBalanceSymbol : NSObject
 
-@property (nonatomic, strong) Stack *stack;
+@property (nonatomic, strong) StackNode *stack;
 
 - (void)checkPascal;
 - (void)checkC;

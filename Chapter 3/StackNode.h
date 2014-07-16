@@ -27,7 +27,7 @@
  *
  *  @return The head node of the stack
  */
-- (StackNode *)createStack;
++ (StackNode *)createStack;
 + (void)disposeStack:(StackNode *)stack;
 + (void)makeEmpty:(StackNode *)stack;
 

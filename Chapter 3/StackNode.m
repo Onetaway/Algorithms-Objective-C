@@ -22,7 +22,7 @@
     return stack.next == nil;
 }
 
-- (StackNode *)createStack
++ (StackNode *)createStack
 {
     StackNode *stack = [[StackNode alloc] init];
     

@@ -55,7 +55,8 @@ int main(int argc, const char * argv[])
         //unionLink();
         //addPolynomial();
         //findSpecificElement();
-        selfAdjusting();
+        //selfAdjusting();
+        checkLanguageBalanceSymbol();
         
     }
     return 0;
