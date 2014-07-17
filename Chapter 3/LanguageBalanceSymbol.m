@@ -9,15 +9,15 @@
 #import "LanguageBalanceSymbol.h"
 #import "StackNode.h"
 
-static NSString *cCorrectSymbol = @"/*,[,(,),],{,},*/";
-static NSString *cWrongSymbol = @"(,],(,),{,},/*,}";
+static NSString *cCorrectSymbol = @"/*,*/,(,),[,],{,}";
 
 @implementation LanguageBalanceSymbol
 
 - (void)checkC
 {
+    NSString *leftComment = @"/*";
+    
     NSArray *correctArray = [cCorrectSymbol componentsSeparatedByString:@","];
-    NSArray *wrongArray = [cWrongSymbol componentsSeparatedByString:@","];
     StackNode *stack = [StackNode createStack];
     
     for (int i = 0; i < [correctArray count]; i++) {
@@ -27,14 +27,14 @@ static NSString *cWrongSymbol = @"(,],(,),{,},/*,}";
             [correctArray[i] isEqualToString:@"["]) {
             
             [StackNode pushElement:[correctArray[i] intValue] inStack:stack];
-        }
-        
-        if ([correctArray[i] isEqualToString:@"*/"] ||
-            [correctArray[i] isEqualToString:@"}"] ||
-            [correctArray[i] isEqualToString:@")"] ||
-            [correctArray[i] isEqualToString:@"]"]) {
             
-            [StackNode popElement:stack];
+        } else if ([correctArray[i] isEqualToString:@"*/"]) {
+            
+            StackNode *popElement = [StackNode popElement:stack];
+            
+            if (popElement.data != [leftComment intValue]) {
+                NSLog(@"不匹配");
+            }
         }
     }
 }

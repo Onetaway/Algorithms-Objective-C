@@ -61,12 +61,16 @@
     return stack.next.data;
 }
 
-+ (void)popElement:(StackNode *)stack
++ (StackNode *)popElement:(StackNode *)stack
 {
     NSAssert(stack, @"stack can't be nil");
     NSAssert(stack, @"stack is empty");
     
+    StackNode *popElement = [[StackNode alloc] init];
+    stack.next = popElement;
     stack.next = stack.next.next;
+    
+    return popElement;
 }
 
 + (void)disposeStack:(StackNode *)stack

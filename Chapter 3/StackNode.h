@@ -39,7 +39,7 @@
  */
 + (void)pushElement:(int)element inStack:(StackNode *)stack;
 + (int)topElement:(StackNode *)stack;
-+ (void)popElement:(StackNode *)stack;
++ (StackNode *)popElement:(StackNode *)stack;
 
 @end
 
