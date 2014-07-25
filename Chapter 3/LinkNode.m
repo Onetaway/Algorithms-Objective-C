@@ -18,7 +18,7 @@
 #pragma mark - Single Link List Basic Operations
 + (LinkNode *)makeEmpty:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     link.next = nil;
     return link;
@@ -26,15 +26,15 @@
 
 + (BOOL)isEmpty:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     return link.next == nil;
 }
 
 + (BOOL)isLast:(LinkNode *)position inLink:(LinkNode *)link
 {
-    NSAssert(position, @"position can't be nil");
-    NSAssert(link, @"link can't be nil");
+    OAAssert(position, @"position can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     BOOL result = YES;
     
@@ -49,7 +49,7 @@
 
 + (LinkNode *)findElement:(int)x inLink:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     LinkNode *p = link;
     
@@ -68,7 +68,7 @@
  */
 + (void)deleteElement:(int)x inLink:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     LinkNode *privious = [LinkNode findPreviousOfElement:x inLink:link];
     BOOL isLast = [LinkNode isLast:privious inLink:link];
@@ -82,7 +82,7 @@
 
 + (LinkNode *)findPreviousOfElement:(int)x inLink:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     LinkNode *p = link;
     
@@ -95,8 +95,8 @@
 
 + (void)insertElement:(int)x inLink:(LinkNode *)link atPosition:(LinkNode *)position
 {
-    NSAssert(link, @"link can't be nil");
-    NSAssert(position, @"position can't be nil");
+    OAAssert(link, @"link can't be nil");
+    OAAssert(position, @"position can't be nil");
     
     LinkNode *insertedNode = [[LinkNode alloc] init];
     insertedNode.data = x;
@@ -121,20 +121,20 @@
 
 + (void)deleteList:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     link.next = nil;
 }
 
 + (LinkNode *)headerNode:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     return link;
 }
 
 + (LinkNode *)firstNode:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     LinkNode *firstNode = nil;
     
     if (link.next) {
@@ -153,8 +153,8 @@
 
 + (int)retrieve:(LinkNode *)position inLink:(LinkNode *)link
 {
-    NSAssert(position, @"position can't be nil");
-    NSAssert(link, @"link can't be nil");
+    OAAssert(position, @"position can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     LinkNode *p = link;
     
@@ -167,7 +167,7 @@
 
 + (void)printLinkList:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     while (link.next) {
         NSLog(@"link%@ %ld", link, (long)link.next.data);

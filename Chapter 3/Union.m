@@ -73,8 +73,8 @@
 
 - (LinkNode *)p_unionLink1:(LinkNode *)l1 withLink2:(LinkNode *)l2
 {
-    NSAssert(l1, @"link 1 can't be nil");
-    NSAssert(l2, @"link 2 can't be nil");
+    OAAssert(l1, @"link 1 can't be nil");
+    OAAssert(l2, @"link 2 can't be nil");
     
     LinkNode *pos1 = l1;
     LinkNode *pos2 = l2;

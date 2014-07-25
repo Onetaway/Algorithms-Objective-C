@@ -7,3 +7,13 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
 #endif
+
+
+#define OAAssert(expression, ...) \
+    do { \
+        if(!(expression)) { \
+            NSString *__MAAssert_temp_string = [NSString stringWithFormat: @"Assertion failure: %s in %s on line %s:%d. %@", #expression, __func__, __FILE__, __LINE__, [NSString stringWithFormat: @"" __VA_ARGS__]]; \
+            NSLog(@"%@", __MAAssert_temp_string); \
+            abort(); \
+        } \
+    } while(0)

@@ -32,7 +32,7 @@
 
 - (void)printLinkList:(LinkNode *)link
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     while (link.next) {
         NSLog(@"link%@ %ld", link, (long)link.next.data);

@@ -12,7 +12,7 @@
 
 + (BSTNode *)makeEmpty:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
     
     [BSTNode makeEmpty:root.left];
     [BSTNode makeEmpty:root.right];
@@ -22,7 +22,7 @@
 
 + (BSTNode *)findElement:(int)data inBSTTree:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
     
     if (data < root.data) {
         return [BSTNode findElement:data inBSTTree:root.left];
@@ -35,7 +35,7 @@
 
 + (BSTNode *)findMinElementRecursion:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
     
     if (!root.left) {
         return root;
@@ -46,7 +46,7 @@
 
 + (BSTNode *)findMinElementNonRecursion:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
     
     BSTNode *position = root;
     
@@ -59,7 +59,7 @@
 
 + (BSTNode *)findMaxElementRecursion:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
     
     if (!root.right) {
         return root;
@@ -70,7 +70,7 @@
 
 + (BSTNode *)findMaxElementNonRecursion:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
     
     BSTNode *position = root;
     
@@ -81,7 +81,7 @@
     return position;
 }
 
-+ (BSTNode *)insertElement:(int)data inBSTTree:(BSTNode *)root
+/*+ (BSTNode *)insertElement:(int)data inBSTTree:(BSTNode *)root
 {
     if (!root) {
         BSTNode *insertedNode = [[BSTNode alloc] init];
@@ -98,16 +98,16 @@
 
 + (BSTNode *)deleteElement:(int)data inBSTTree:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
 }
 
 + (int)retrieveElementAtThePosition:(BSTNode *)position inBSTTree:(BSTNode *)root
 {
-    NSAssert(root, @"BST tree can't be nil");
-    NSAssert(position, @"position can't be nil");
+    OAAssert(root, @"BST tree can't be nil");
+    OAAssert(position, @"position can't be nil");
     
     
-}
+}*/
 
 @end
 

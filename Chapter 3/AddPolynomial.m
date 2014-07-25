@@ -77,7 +77,7 @@
 
 + (void)p_printPolynomial:(AddPolynomial *)poly
 {
-    NSAssert(poly, @"polynomial can't be nil");
+    OAAssert(poly, @"polynomial can't be nil");
     
     while (poly.next) {
         NSLog(@"系数: %d, 指数:%d", poly.next.coefficient, poly.next.exponent);
@@ -88,8 +88,8 @@
 
 - (AddPolynomial *)p_addPolyOne:(AddPolynomial *)polyOne polyTwo:(AddPolynomial *)polyTwo
 {
-    NSAssert(polyOne, @"Polynomial One can't be nil");
-    NSAssert(polyTwo, @"Polynomial Two can't be nil");
+    OAAssert(polyOne, @"Polynomial One can't be nil");
+    OAAssert(polyTwo, @"Polynomial Two can't be nil");
     
     AddPolynomial *resultHead = [[AddPolynomial alloc] init];
     resultHead.coefficient = 0;
@@ -137,7 +137,7 @@
 
 - (AddPolynomial *)p_insertedNode:(AddPolynomial *)point
 {
-    NSAssert(point, @"point can't be nil");
+    OAAssert(point, @"point can't be nil");
     
     AddPolynomial *result = [[AddPolynomial alloc] init];
     result.coefficient = point.coefficient;

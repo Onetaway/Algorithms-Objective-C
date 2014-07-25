@@ -151,8 +151,8 @@
 
 - (LinkNode *)p_findPriorItemOfNode:(LinkNode *)aNode inLinkList:(LinkNode *)link
 {
-    NSAssert(link.next, @"link can't be nil");
-    NSAssert(aNode, @"aNode can't be nil");
+    OAAssert(link.next, @"link can't be nil");
+    OAAssert(aNode, @"aNode can't be nil");
     
     LinkNode *p = link.next;
     
@@ -170,8 +170,8 @@
 
 - (LinkNode *)p_findNextItemOfNode:(LinkNode *)aNode inLinkList:(LinkNode *)link
 {
-    NSAssert(aNode, @"aNode can't be nil");
-    NSAssert(link, @"link can't be nil");
+    OAAssert(aNode, @"aNode can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     LinkNode *p = link;
     
@@ -214,7 +214,7 @@
 
 - (void)p_printDoubleLinkList:(DoubleLinkNode *)link
 {
-    NSAssert(link, @"double link can't be nil");
+    OAAssert(link, @"double link can't be nil");
     
     DoubleLinkNode *p = [[DoubleLinkNode alloc] init];
     p = link;
@@ -229,7 +229,7 @@
                                        dataA:(NSInteger)dataA
                                        dataB:(NSInteger)dataB
 {
-    NSAssert(link, @"double link can't be nil");
+    OAAssert(link, @"double link can't be nil");
     
     DoubleLinkNode *positionA = [self p_findElementInDoubleLinkList:dataA list:link];
     DoubleLinkNode *positionB = [self p_findElementInDoubleLinkList:dataB list:link];
@@ -251,7 +251,7 @@
 - (DoubleLinkNode *)p_findElementInDoubleLinkList:(NSInteger)data
                                              list:(DoubleLinkNode *)link
 {
-    NSAssert(link, @"double link can't be nil");
+    OAAssert(link, @"double link can't be nil");
     
     DoubleLinkNode *p = link;
     

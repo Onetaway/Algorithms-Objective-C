@@ -53,7 +53,7 @@
 #pragma mark - Private Methods
 - (LinkNode *)p_createLink:(long)num
 {
-    NSAssert(num > 0, @"element num must > 0");
+    OAAssert(num > 0, @"element num must > 0");
     
     LinkNode *head = [[LinkNode alloc] init];
     head.data = 0;
@@ -72,8 +72,8 @@
 
 - (LinkNode *)p_insertNodeAtHead:(LinkNode *)link insertedNode:(LinkNode *)node
 {
-    NSAssert(link, @"link can't be nil");
-    NSAssert(node, @"inserted node can't be nil");
+    OAAssert(link, @"link can't be nil");
+    OAAssert(node, @"inserted node can't be nil");
     
     LinkNode *p = link;
     

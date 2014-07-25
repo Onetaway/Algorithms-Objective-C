@@ -46,7 +46,7 @@
 #pragma mark - Private Methods
 - (LinkNode *)p_createLink:(long)num
 {
-    NSAssert(num > 0, @"element num must > 0");
+    OAAssert(num > 0, @"element num must > 0");
     
     LinkNode *head = [[LinkNode alloc] init];
     LinkNode *tail = head;
@@ -76,7 +76,7 @@
 
 - (LinkNode *)p_findSpecificElementNonRecursion:(LinkNode *)link element:(long)data
 {
-    NSAssert(link, @"link can't be nil");
+    OAAssert(link, @"link can't be nil");
     
     LinkNode *p = link;
     while (p.next && p.next.data != data) {

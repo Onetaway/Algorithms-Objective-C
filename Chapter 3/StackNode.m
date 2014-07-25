@@ -17,7 +17,7 @@
 
 + (BOOL)isEmpty:(StackNode *)stack
 {
-    NSAssert(stack, @"stack can't be nil");
+    OAAssert(stack, @"stack can't be nil");
     
     return stack.next == nil;
 }
@@ -34,7 +34,7 @@
 
 + (void)makeEmpty:(StackNode *)stack
 {
-    NSAssert(stack, @"stack can't be nil");
+    OAAssert(stack, @"stack can't be nil");
     
     while (![StackNode isEmpty:stack]) {
         [StackNode popElement:stack];
@@ -43,7 +43,7 @@
 
 + (void)pushElement:(int)element inStack:(StackNode *)stack
 {
-    NSAssert(stack, @"stack can't be nil");
+    OAAssert(stack, @"stack can't be nil");
     
     StackNode *dataNode = [[StackNode alloc] init];
     dataNode.data = element;
@@ -55,16 +55,16 @@
 
 + (int)topElement:(StackNode *)stack
 {
-    NSAssert(stack, @"stack can't be nil");
-    NSAssert(stack.next, @"stack is empty");
+    OAAssert(stack, @"stack can't be nil");
+    OAAssert(stack.next, @"stack is empty");
     
     return stack.next.data;
 }
 
 + (StackNode *)popElement:(StackNode *)stack
 {
-    NSAssert(stack, @"stack can't be nil");
-    NSAssert(stack, @"stack is empty");
+    OAAssert(stack, @"stack can't be nil");
+    OAAssert(stack, @"stack is empty");
     
     StackNode *popElement = [[StackNode alloc] init];
     stack.next = popElement;
@@ -75,7 +75,7 @@
 
 + (void)disposeStack:(StackNode *)stack
 {
-    NSAssert(stack, @"stack can't be nil");
+    OAAssert(stack, @"stack can't be nil");
     
     stack.next = nil;
 }
