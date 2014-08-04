@@ -81,7 +81,8 @@
     return position;
 }
 
-/*+ (BSTNode *)insertElement:(int)data inBSTTree:(BSTNode *)root
+// 在BST中插入一个结点，就好像是执行一次Find操作。
++ (BSTNode *)insertElement:(int)data inBSTTree:(BSTNode *)root
 {
     if (!root) {
         BSTNode *insertedNode = [[BSTNode alloc] init];
@@ -91,12 +92,16 @@
         
         root = insertedNode;
         return root;
-    } else if (data < root) {
-        
+    } else if (data < root.data) {
+        root.left = [BSTNode insertElement:data inBSTTree:root.left];
+    } else if (data > root.data) {
+        root.right = [BSTNode insertElement:data inBSTTree:root.right];
     }
+    
+    return root;
 }
 
-+ (BSTNode *)deleteElement:(int)data inBSTTree:(BSTNode *)root
+/*+ (BSTNode *)deleteElement:(int)data inBSTTree:(BSTNode *)root
 {
     OAAssert(root, @"BST tree can't be nil");
 }
