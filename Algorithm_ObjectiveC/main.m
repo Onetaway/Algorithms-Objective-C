@@ -24,6 +24,9 @@
 #import "FindSpecificElement.h"
 #import "SelfAdjusting.h"
 
+// Chapter 4
+#import "BSTNode.h"
+
 #pragma mark - Chapter 1 Functions declarations
 void selectionProblem();
 void wordPuzzle();
@@ -38,6 +41,9 @@ void addPolynomial(); // Ex 3.6
 void findSpecificElement();  // Ex 3.11
 void selfAdjusting(); // Ex 3.15
 void checkLanguageBalanceSymbol(); // Ex 3.18
+
+#pragma mark - Chapter 4 Function declarations
+void BSTTree();
 
 
 #pragma mark - main
@@ -56,7 +62,10 @@ int main(int argc, const char * argv[])
         //addPolynomial();
         //findSpecificElement();
         //selfAdjusting();
-        checkLanguageBalanceSymbol();
+        //checkLanguageBalanceSymbol();
+        
+        //TODO: Chapter 4
+        BSTTree();
         
     }
     return 0;
@@ -135,6 +144,30 @@ void selfAdjusting()
     [adjust selfAdjustingArray];
     [adjust selfAdjustingLink];
 }
+
+
+#pragma mark - Chapter 4 Functions Implements
+void BSTTree()
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
